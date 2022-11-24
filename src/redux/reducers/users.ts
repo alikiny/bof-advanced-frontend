@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { access } from "fs";
-import { User, UserLoginCredential, UserReducer } from "../../types/Users";
+
+import { User, UserReducer } from "../../types/Users";
 
 const initialState: UserReducer = {
     users: [],

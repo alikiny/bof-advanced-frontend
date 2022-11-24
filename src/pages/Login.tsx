@@ -7,7 +7,7 @@ import { authenticate } from '../redux/reducers/users'
 const Login = () => {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
-    const user = useAppSelector(state => state.userReducer.currentUser)
+    const user = useAppSelector(/* ≤ */state => state.userReducer.currentUser)
     const dispatch = useAppDispatch()
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -24,8 +24,8 @@ const Login = () => {
     return (
         <div>
             <form onSubmit={onSubmit}>
-                Email : <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                Password: <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                Email : <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                Password: <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
                 <button type="submit">Submit</button>
             </form>
             {user && (

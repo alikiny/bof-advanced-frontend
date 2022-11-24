@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 
 import { useAppDispatch, useAppSelector } from './redux/hooks';
 import { fetchAll } from './redux/reducers/products';
-import Products from "./pages/Products"
 import Login from './pages/Login';
 import { authenticate, logOut } from './redux/reducers/users';
 import axios from 'axios';

@@ -1,0 +1,8 @@
+name: React-Advanced test push
+on: [push]
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print name
+        run: echo "test push request"
